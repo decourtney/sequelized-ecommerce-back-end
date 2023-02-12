@@ -15,6 +15,7 @@ Product.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      onDelete: 'CASCADE'
     },
     product_name: {
       type: DataTypes.STRING,
@@ -42,7 +43,7 @@ Product.init(
     hooks: {
       beforeCreate: async (newProductData) =>
       {
-        if(newProductData.stock < 10) return newProductData = 10;
+        if(newProductData.stock < 10) return newProductData.stock = 10;
       }
     },
     sequelize,
