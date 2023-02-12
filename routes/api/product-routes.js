@@ -47,10 +47,11 @@ router.post('/', (req, res) =>
 {
   /* req.body should look like this...
     {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
+      "product_name": "NVIDIA GTX 4090",
+      "price": 1500,
+      "stock": 2,
+      "category_id": 6 (an existing category id),
+      "tagIds": [4,5,6,7]
     }
   */
   Product.create(req.body)
