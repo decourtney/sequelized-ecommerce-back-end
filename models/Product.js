@@ -37,7 +37,7 @@ Product.init(
         key: 'id',
         unique: false,
       }
-    },
+    }
   },
   {
     hooks: {
